@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+canvas {
+    background-color: #2d492c;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 4rem;
+    margin: 0.5rem;
+}
+
+.gridcontainer {
+    display: grid;
+    width: fit-content;
+    gap: 1rem;
+    grid-template-rows: repeat(1, 1fr);
+    grid-auto-flow: column;
+    margin-top: 1rem;
+}
+
+.empty {
+    display: inline-block;
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    color: dimgray;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+    background: radial-gradient(#a5a7b06e, #73757e6e);
+    overflow: hidden;
+    z-index: "1";
+}
+
+.png {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.png,
+.item-amount {
+    pointer-events: none;
+}
+.item-amount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 2px;
+    border-radius: 3px;
+}
+
+.item-button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.overlay-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.empty,
+.png,
+.item-amount,
+.overlay-button {
+    user-select: none;
+}
+
+#craftingContainer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1fr);
+    gap: 1rem;
+    grid-auto-flow: column;
+}
+
+.craft-item {
+    display: inline-block;
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    color: dimgray;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+    background: radial-gradient(#a5a7b06e, #73757e6e);
+    overflow: hidden;
+    z-index: "1";
+}
+
+.craft-item .png {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.craft-item .item-amount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 2px;
+    border-radius: 3px;
+}
